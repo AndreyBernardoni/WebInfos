@@ -1,7 +1,3 @@
-<?php
-$name = $_GET['name'];
-?>
-
 <html>
 
 <head>
@@ -19,10 +15,10 @@ $name = $_GET['name'];
         <div class="hero-body">
             <div class="container has-text-centered">
                 <p class="title">
-                    Bem vindo <?= $name ?>!
+                    Bem vindo!
                 </p>
                 <p class="subtitle">
-                    Registre-se!
+                    Digite suas informações.
                 </p>
             </div>
         </div>
@@ -40,7 +36,7 @@ $name = $_GET['name'];
 
                                 <!--- Title -->
                                 <h1 class="title has-text-centered">
-                                    Registre-se
+                                    Infos
                                 </h1>
 
                                 <!--- Form -->

@@ -37,25 +37,32 @@
                             </h1>
 
                             <!--- Form -->
-                            <form method="get" action="register.php">
-
-                                <!--- Name field -->
-                                <div class="field">
-                                    <label class="label">Name</label>
-                                    <div class="control ">
-                                        <input required class="input is-rounded is-black is-outlined" type="text"
-                                            placeholder="Ex. Andrey Fialho" name="name">
-                                    </div>
-                                </div>
+                            <form method="post" action="valida_login.php">
 
                                 <!--- Email field -->
                                 <div class="field">
                                     <label class="label">Email</label>
                                     <div class="control">
                                         <input class="input is-rounded is-black is-outlined" type="email"
-                                            placeholder="Ex. andrey@gmail.com">
+                                            placeholder="Ex. andrey@gmail.com" name="email">
                                     </div>
                                 </div>
+                                
+                                <!--- Senha field -->
+                                <div class="field">
+                                    <label class="label">Senha</label>
+                                    <div class="control">
+                                        <input class="input is-rounded is-black is-outlined" type="password"
+                                            placeholder="Ex. 123456" name="senha">
+                                    </div>
+                                </div>
+
+                                <!--- Error Text -->
+                                <?php
+                                    if (isset($_GET['login']) && $_GET['login'] == 'erro') {
+                                        echo '<p class="has-text-centered has-text-danger">Usuário ou senha inválidos!</p>';
+                                    }
+                                ?>
 
                                 <!--- Login button -->
                                 <div class="column has-text-centered">
